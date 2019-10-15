@@ -1,0 +1,5 @@
+^zz_dwdradar\.Rproj$
+^\.Rproj\.user$
+src/binary_to_num.o
+src/init.o
+src/dwdradar.dll
