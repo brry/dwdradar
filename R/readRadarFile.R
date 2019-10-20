@@ -17,7 +17,7 @@
 #' @export
 #' @examples
 #'
-#' f <- system.file("tests/raa01-sf_10000-1910141950-dwd---bin", package="dwdradar")
+#' f <- system.file("extdata/raa01_sf_2019-10-14_1950", package="dwdradar")
 #' out <- readRadarFile(f)
 #' out$meta
 #'
