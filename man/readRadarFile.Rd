@@ -30,7 +30,6 @@ Read a single binary DWD Radolan file. To be used in \code{rdwd}.\cr
 \examples{
 
 f <- system.file("extdata/raa01_sf_2019-10-14_1950", package="dwdradar")
-if(f=="") stop("f should not be empty!")
 out <- readRadarFile(f)
 out$meta
 

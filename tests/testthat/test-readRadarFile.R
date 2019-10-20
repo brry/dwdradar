@@ -32,9 +32,9 @@ rw <- readRadarFile("../raa01-rw_10000-1910141450-dwd---bin")
 test_dim_and_vals(rw, 0.0, 10.7, 900, 900)
 })
 
-if(FALSE) test_that("readRadarFile works for RY @ ftp://weather/radar/radolan/ry/onefile", {
-ry <- readRadarFile("../raa01-ry_10000-1910140140-dwd---bin")
-test_dim_and_vals(ry, 0.0, 77777, 900, 900)
+test_that("readRadarFile works for RY @ ftp://weather/radar/radolan/ry/onefile", {
+ry <- readRadarFile("../raa01-ry_10000-1910182355-dwd---bin")
+test_dim_and_vals(ry, 0.0, 2.9, 900, 900)
 })
 
 test_that("readRadarFile works for SF @ ftp://weather/radar/radolan/sf/onefile", {

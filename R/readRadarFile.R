@@ -72,7 +72,7 @@ if(rw) VR<- readheader(11) # " 00000001MS" / " 00000001VR2017.002MS"
 if(rw) if(substr(VR,10,11)=="VR") VR2 <- readheader(10)
 TLEN     <- readheader(3, asnum=TRUE) # 70 characters
 RADS     <- unlist(strsplit(gsub("<|>| ","",readheader(TLEN)),",")) # Radarstandortkuerzel (boo, ros, emd, ...)
-if(rw | PRODUCT=="RX")
+if(rw | PRODUCT=="RX" | PRODUCT=="RY")
   {  ETX <- readheader(1) ; RADB <- NA } else {
 ST       <- readheader(2) # ST
 TLEN2    <- readheader(3, asnum=TRUE) # 120 characters
