@@ -4,7 +4,6 @@
 #' @author Berry Boessenkool, \email{berry-b@@gmx.de}, May + Oct 2019
 #' @seealso \code{\link{readRadarFile}}
 #' @keywords file
-#' @export
 #'
 #' @param dat      Binary data returned by \code{\link{readBin}}
 #' @param len      Length of data.

@@ -3,3 +3,4 @@
 src/binary_to_num.o
 src/init.o
 src/dwdradar.dll
+^cran-comments\.md$

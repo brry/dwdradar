@@ -25,11 +25,23 @@ Read a single binary DWD Radolan file. To be used in \code{rdwd}.\cr
   and let me know what needs to be changed.\cr
   Binary bits are converted to decimal numbers with Fortran routines, see
   \url{https://github.com/brry/dwdradar/tree/master/src}.
-  They are called via \code{\link{bin2num}}.
+  They are called via \code{\link{bin2num}} (not exported, but documented).
 }
 \examples{
-# see the tests, and readDWD.binary / readDWD.radar in the rdwd package
 
+f <- system.file("tests/raa01-sf_10000-1910141950-dwd---bin", package="dwdradar")
+out <- readRadarFile(f)
+out$meta
+
+if(requireNamespace("raster", quietly=TRUE))
+  raster::plot(raster::raster(out$dat))
+
+# for more files, see the tests.
+# for real-world usage, readDWD.binary / readDWD.radar in the rdwd package
+
+}
+\seealso{
+real-world usage in \code{rdwd}: \url{https://bookdown.org/brry/rdwd/raster-data.html}
 }
 \author{
 Maintained by Berry Boessenkool, \email{berry-b@gmx.de}, May + Oct 2019.\cr

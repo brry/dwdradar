@@ -6,17 +6,26 @@
 #'   and let me know what needs to be changed.\cr
 #'   Binary bits are converted to decimal numbers with Fortran routines, see
 #'   \url{https://github.com/brry/dwdradar/tree/master/src}.
-#'   They are called via \code{\link{bin2num}}.
+#'   They are called via \code{\link{bin2num}} (not exported, but documented).
 #' @return Invisible list with \code{dat} (matrix) and \code{meta}
 #' (list with elements from header, see Kompositformatbeschreibung)
 #' @author Maintained by Berry Boessenkool, \email{berry-b@@gmx.de}, May + Oct 2019.\cr
 #'   Original codebase by Henning Rust & Christoph Ritschel at FU Berlin
 #' @keywords file binary
 #' @useDynLib dwdradar, .registration=TRUE
-# @importFrom package fun1 fun2
+#' @seealso real-world usage in \code{rdwd}: \url{https://bookdown.org/brry/rdwd/raster-data.html}
 #' @export
 #' @examples
-#' # see the tests, and readDWD.binary / readDWD.radar in the rdwd package
+#'
+#' f <- system.file("tests/raa01-sf_10000-1910141950-dwd---bin", package="dwdradar")
+#' out <- readRadarFile(f)
+#' out$meta
+#'
+#' if(requireNamespace("raster", quietly=TRUE))
+#'   raster::plot(raster::raster(out$dat))
+#'
+#' # for more files, see the tests.
+#' # for real-world usage, readDWD.binary / readDWD.radar in the rdwd package
 #'
 #' @param binfile Name of a single binary file
 #' @param na      Value to be set for missing data (bit 14). DEFAULT: NA
