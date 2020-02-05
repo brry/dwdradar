@@ -42,6 +42,11 @@ sf <- readRadarFile("../raa01-sf_10000-1910141950-dwd---bin")
 test_dim_and_vals(sf, 0.0, 43.9, 900, 900)
 })
 
+test_that("readRadarFile works for RQ @ ftp://weather/radar/radvor/rq/onefile", {
+rq <- readRadarFile("../RQ2002031845_060")
+test_dim_and_vals(rq, 0, 7, 900, 900)
+})
+
 test_that("readRadarFile works for SF @ GRIDBASE/daily/radolan/historical/bin/2016/SF201605.tar.gz/onefile", {
 sf <- readRadarFile("../raa01-sf_10000-1605010450-dwd---bin_dailyRadHist")
 test_dim_and_vals(sf, 0.0, 39.2, 900, 900)

@@ -1,7 +1,7 @@
 Package: dwdradar
 Title: Read Binary Radar Files from 'DWD' (German Weather Service)
-Version: 0.2.0
-Date: 2019-10-24
+Version: 0.2.1
+Date: 2020-02-05
 Authors@R: 
   c(
   person("Berry", "Boessenkool", role=c("aut", "cre"), email="berry-b@gmx.de"),
@@ -15,4 +15,4 @@ Encoding: UTF-8
 LazyData: true
 Suggests: testthat, raster, berryFunctions, R.utils
 NeedsCompilation: yes
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

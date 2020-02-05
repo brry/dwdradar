@@ -70,9 +70,13 @@ DIM      <- as.numeric(unlist(strsplit(readheader(9),"x"))) # " 900x 900" to c(9
 MS       <- readheader(2) # MS
 if(rw) VR<- readheader(11) # " 00000001MS" / " 00000001VR2017.002MS"
 if(rw) if(substr(VR,10,11)=="VR") VR2 <- readheader(10)
+if(PRODUCT=="RQ")
+  MF     <- readheader(23) # "  60MF        8QN 001MS"
 TLEN     <- readheader(3, asnum=TRUE) # 70 characters
 RADS     <- unlist(strsplit(gsub("<|>| ","",readheader(TLEN)),",")) # Radarstandortkuerzel (boo, ros, emd, ...)
-if(rw | PRODUCT=="RX" | PRODUCT=="RY")
+if(PRODUCT=="RQ")
+ SPACE   <- readheader(1)
+if(rw | PRODUCT %in% c("RX","RY","RQ") )
   {  ETX <- readheader(1) ; RADB <- NA } else {
 ST       <- readheader(2) # ST
 TLEN2    <- readheader(3, asnum=TRUE) # 120 characters
