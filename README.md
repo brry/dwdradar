@@ -5,7 +5,7 @@ read DWD binary radar files (RADOLAN).
 [![Rdoc](http://www.rdocumentation.org/badges/version/dwdradar)](https://www.rdocumentation.org/packages/dwdradar)
 
 This is an auxiliary package to [rdwd](https://github.com/brry/rdwd#rdwd).  
-`dwdradar` is used in some of the functions underlying `read.DWD()`, see the [raster chapter](https://bookdown.org/brry/rdwd/raster-data.html) in the documentation.
+`dwdradar` is used in some of the functions underlying `readDWD()`, see the [raster chapter](https://bookdown.org/brry/rdwd/raster-data.html) in the documentation.
 
 ### Installation
 
