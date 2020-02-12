@@ -7,7 +7,7 @@ test_dim_and_vals <- function(x, min, max, ncol, nrow, plot=interactive())
   expect_equal(range(x$dat, na.rm=TRUE), c(min, max) )
   expect_equal(ncol(x$dat), ncol)
   expect_equal(nrow(x$dat), nrow)
-  expect_length(x$meta, 12)
+  expect_length(x$meta, 13)
   if(plot)
   raster::plot(raster::raster(x$dat),
                main=c(as.character(x$meta$date), x$meta$filename)    )
