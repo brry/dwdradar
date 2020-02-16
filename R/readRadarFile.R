@@ -67,7 +67,7 @@ if(h$product=="RX") # WX,EX? - currently handled like SF # ToDo: Test
 dat.val <- dat.val*h$precision
 
 # convert into a matrix + give row and column names according to RADOLAN convention:
-if(h$product=="RW" | h$product=="SF")
+if(h$product=="RW" | h$product=="SF" | h$product=="RQ")
   {
   dat.mat <- matrix(dat.val, ncol=DIM[2], byrow=TRUE) # ToDo: not sure about this
   dat.mat <- apply(dat.mat, 2, rev)
