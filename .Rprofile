@@ -1,1 +1,1 @@
-try(installB::installB("dwdradar"), silent=TRUE)
+try(installB::checkOutdated("dwdradar"), silent=TRUE)
