@@ -35,6 +35,7 @@
 readRadarFile <- function(binfile, na=NA, clutter=NA)
 {
 finalOut <- try({
+if(!file.exists(binfile)) stop("The following file does not exist: '", binfile, "'.")
 openfile <- file(binfile,"rb") # will be read successively
 on.exit(close(openfile), add=TRUE)
 

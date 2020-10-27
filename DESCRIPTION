@@ -1,7 +1,7 @@
 Package: dwdradar
 Title: Read Binary Radar Files from 'DWD' (German Weather Service)
-Version: 0.2.3
-Date: 2020-05-06
+Version: 0.2.4
+Date: 2020-10-27
 Authors@R: 
   c(
   person("Berry", "Boessenkool", role=c("aut", "cre"), email="berry-b@gmx.de"),
