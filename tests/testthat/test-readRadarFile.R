@@ -56,3 +56,9 @@ test_that("readRadarFile works for RX for a personally obtained non-public file"
 rx <- readRadarFile("../raa01-rx_10000-1605290600-dwd---bin_Braunsbach")
 test_dim_and_vals(rx, 31.5, 95.0, 900, 900)
 })
+
+# RADKLIM data (in Radolan folder), see https://github.com/brry/dwdradar/issues/5
+test_that("readRadarFile works for YW @ GRIDBASE/5_minutes/radolan/reproc/2017_002/bin/2020/YW2017.002_202006.tar/onefile", {
+yw <- readRadarFile("../raa01-yw2017.002_10000-2006131525-dwd---bin")
+test_dim_and_vals(yw, 0.0, 13.75, 900, 1100)
+})
