@@ -72,7 +72,7 @@ if(h$product=="RW" | h$product=="SF" | h$product=="RQ" | h$product=="YW")
   {
   dat.mat <- matrix(dat.val, ncol=DIM[2], byrow=TRUE) # ToDo: not sure about this
   dat.mat <- apply(dat.mat, 2, rev)
-  dimnames(dat.mat) <- list(x.nrs=1:DIM[1]-1, y.nrs=1:DIM[2]-1) # ToDo: necessary? slow?
+  dimnames(dat.mat) <- list(x.nrs=1:DIM[1]-1, y.nrs=1:DIM[2]-1)
   }
 else
   {

@@ -62,3 +62,17 @@ test_that("readRadarFile works for YW @ GRIDBASE/5_minutes/radolan/reproc/2017_0
 yw <- readRadarFile("../raa01-yw2017.002_10000-2006131525-dwd---bin")
 test_dim_and_vals(yw, 0.0, 13.75, 900, 1100)
 })
+
+
+# temporary dnames argument evaluation (computation speed) - arg removed again
+if(FALSE)
+{
+folder <- paste0(tempdir(),"/rklimtest")
+file <- rdwd::locdir(file="5_minutes_radolan_reproc_2017_002_bin_2020_YW2017.002_202006.tar")
+dummy <- rdwd:::readDWD.rklim(file, exdir=folder, selection=1)
+rm(dummy); gc()
+dnames <- function(D) sapply(dir(folder,full=T)[1:50], readRadarFile, dnames=D)
+library(microbenchmark)
+mb <- microbenchmark(dnames(T),dnames(F), times=50)
+plot(mb) # TRUE is marginally faster -dunno why...
+}
