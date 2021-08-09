@@ -22,3 +22,7 @@ installed directly at `C:/Rtools`
 if(!requireNamespace("remotes", quietly=TRUE)) install.packages("remotes")
 remotes::install_github("brry/dwdradar")
 ```
+
+### History
+The main function, `readRadarFile`, was originally developed inside the `rdwd` package, see [version history](https://github.com/brry/rdwd/commits/7ab29c92f5257d7801f22413725c6cdd4ca6cc13/R/readRadarFile.R) there.  
+Development since Oct 2019 can be tracked in the corresponding dwdradar [version history](https://github.com/brry/dwdradar/commits/master/R/readRadarFile.R).
