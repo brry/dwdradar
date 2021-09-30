@@ -1,15 +1,14 @@
 #' @title read binary radolan radar file
-#' @description Read a single binary DWD Radolan file. To be used in \code{rdwd}.\cr
-#'   If any files ar not read correctly, please let me know. So far, tests have
-#'   only been conducted for some files. Optimally, check the
-#'   Kompositformatbeschreibung at \url{https://www.dwd.de/DE/leistungen/radolan/radolan.html}
-#'   and let me know what needs to be changed.
-#'   The meta-info is extracted with \code{\link{readHeader}} (not exported, but documented)\cr
+#' @description Read a single binary DWD Radolan file. To be used in \code{rdwd},
+#'   especially for proper [1/10 mm] unit correction in \code{rdwd::\link[rdwd]{readDWD}}.\cr
+#'   If any files ar not read correctly, please let me know, referencing the
+#'   Kompositformatbeschreibung at \url{https://www.dwd.de/DE/leistungen/radolan/radolan.html}.\cr
+#'   The meta-info is extracted with \code{\link{readHeader}} (not exported, but documented).\cr
 #'   Binary bits are converted to decimal numbers with Fortran routines, see
 #'   \url{https://github.com/brry/dwdradar/tree/master/src}.
 #'   They are called via \code{\link{bin2num}} (not exported, but documented).
 #' @return Invisible list with \code{dat} (matrix) and \code{meta}
-#' (list with elements from header, see Kompositformatbeschreibung)
+#' (list with elements from header, see Kompositformatbeschreibung).
 #' @author Maintained by Berry Boessenkool, \email{berry-b@@gmx.de}, May + Oct 2019.\cr
 #'   Original codebase by Henning Rust & Christoph Ritschel at FU Berlin
 #' @keywords file binary
