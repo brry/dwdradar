@@ -49,7 +49,7 @@ return(as.integer(val))
 
 
 # Ivan Krylov's R code, see https://github.com/brry/dwdradar/issues/6
-if(T) bin2num <- function(dat, len, na=NA, clutter=NA, RX=FALSE)
+if(FALSE) bin2num <- function(dat, len, na=NA, clutter=NA, RX=FALSE)
 {
 Fna <- -32767L
 Fclutter <- -32766L
