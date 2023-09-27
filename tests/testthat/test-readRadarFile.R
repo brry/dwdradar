@@ -9,7 +9,7 @@ test_dim_and_vals <- function(x, min, max, ncol, nrow, plot=interactive())
   expect_equal(nrow(x$dat), nrow)
   expect_length(x$meta, 13)
   if(plot)
-  raster::plot(raster::raster(x$dat),
+  terra::plot(terra::rast(x$dat),
                main=c(as.character(x$meta$date), x$meta$filename)    )
   }
 

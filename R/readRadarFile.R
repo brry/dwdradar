@@ -21,8 +21,8 @@
 #' out <- readRadarFile(f)
 #' out$meta
 #'
-#' if(requireNamespace("raster", quietly=TRUE))
-#'   raster::plot(raster::raster(out$dat))
+#' if(requireNamespace("terra", quietly=TRUE))
+#'   terra::plot(terra::rast(out$dat))
 #'
 #' # for more files, see the tests.
 #' # for real-world usage, readDWD.binary / readDWD.radar in the rdwd package
