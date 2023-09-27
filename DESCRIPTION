@@ -1,6 +1,6 @@
 Package: dwdradar
 Title: Read Binary Radar Files from 'DWD' (German Weather Service)
-Version: 0.2.9
+Version: 0.2.10
 Date: 2023-09-27
 Authors@R: 
   c(
@@ -14,3 +14,4 @@ License: GPL (>= 2)
 Encoding: UTF-8
 Suggests: testthat, terra, berryFunctions, R.utils
 NeedsCompilation: yes
+RoxygenNote: 7.2.3

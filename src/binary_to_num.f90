@@ -17,7 +17,7 @@ subroutine binary_to_num(raw,Flength,numeric,Fna,Fclutter)
   implicit none
   integer:: i
   integer,INTENT(in):: Flength,Fna,Fclutter
-  integer(KIND=2),DIMENSION(Flength),INTENT(in)::raw
+  integer(KIND=SELECTED_INT_KIND(4)),DIMENSION(Flength),INTENT(in)::raw
   integer,DIMENSION(Flength),INTENT(out)::numeric
 
   ! do cycle over all entries
@@ -52,7 +52,7 @@ subroutine binary_to_num_rx(raw,Flength,numeric,Fna,Fclutter)
   implicit none
   integer:: i
   integer,INTENT(in):: Flength,Fna,Fclutter
-  integer(KIND=1),DIMENSION(Flength),INTENT(in)::raw
+  integer(KIND=SELECTED_INT_KIND(2)),DIMENSION(Flength),INTENT(in)::raw
   integer,DIMENSION(Flength),INTENT(out)::numeric
 
   ! do cycle over all entries
