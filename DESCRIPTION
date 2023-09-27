@@ -14,4 +14,3 @@ License: GPL (>= 2)
 Encoding: UTF-8
 Suggests: testthat, terra, berryFunctions, R.utils
 NeedsCompilation: yes
-RoxygenNote: 7.1.2
