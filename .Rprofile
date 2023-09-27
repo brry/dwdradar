@@ -1,2 +1,3 @@
-try(installB::checkOutdated("dwdradar"), silent=TRUE)
-if(grepl("MacBook",Sys.info()["nodename"])) options(rdwdlocdir="/Users/berry/Desktop/DWDdata")
+if(grepl("Air",Sys.info()["nodename"]))  try(br::loadPackages(), silent=TRUE)
+try(br:::checkOutdated("dwdradar"), silent=TRUE)
+try(br:::loadAndMessage("dwdradar"), silent=TRUE)
