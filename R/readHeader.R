@@ -21,7 +21,7 @@ out$nchar <- nchar(o) + 1 # +1 for ETX
 
 DDHHMI              <- substr(o,  3,  8)
 MOYY                <- substr(o, 14, 17)
-out$date <- strptime(paste0(DDHHMI,"00-",MOYY), format="%d%H%M%S-%m%y")
+out$date <- strptime(paste0(DDHHMI,"00-",MOYY), format="%d%H%M%S-%m%y", tz="UTC")
 out$product         <- substr(o,  1,  2)
 out$location        <- substr(o,  9, 13) # "10000"
 out$radius_format   <- substr(o, 29, 30) # " 3"
