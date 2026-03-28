@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 src/dwdradar.dll
+src/dwdradar.so
+src/*.o
