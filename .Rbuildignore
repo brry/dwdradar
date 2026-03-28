@@ -3,4 +3,6 @@
 src/binary_to_num.o
 src/init.o
 src/dwdradar.dll
+src/dwdradar.so
 ^cran-comments\.md$
+.github/
