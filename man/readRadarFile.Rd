@@ -41,7 +41,7 @@ if(requireNamespace("terra", quietly=TRUE))
 
 }
 \seealso{
-real-world usage in \code{rdwd}: \url{https://bookdown.org/brry/rdwd/raster-data.html}
+real-world usage in \code{rdwd}: \url{https://brry.github.io/rdwd/raster-data.html}
 }
 \author{
 Maintained by Berry Boessenkool, \email{berry-b@gmx.de}, May + Oct 2019.\cr

@@ -13,7 +13,7 @@
 #'   Original codebase by Henning Rust & Christoph Ritschel at FU Berlin
 #' @keywords file binary
 #' @useDynLib dwdradar, .registration=TRUE
-#' @seealso real-world usage in \code{rdwd}: \url{https://bookdown.org/brry/rdwd/raster-data.html}
+#' @seealso real-world usage in \code{rdwd}: \url{https://brry.github.io/rdwd/raster-data.html}
 #' @export
 #' @examples
 #'
